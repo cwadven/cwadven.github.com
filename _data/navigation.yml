@@ -6,7 +6,7 @@ main:
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "카테고리"
     url: /categories/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "태그"
+    url: /tags/
+  - title: "년도"
+    url: /year-archive/
