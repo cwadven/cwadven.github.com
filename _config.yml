@@ -147,6 +147,7 @@ include:
   - _pages
   - /python
   - /data_structures
+  - /algorithm
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
