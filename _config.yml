@@ -29,10 +29,10 @@ logo                     : # path of logo image to display in the masthead, e.g.
 masthead_title           : "성장하고 싶은 NULL 개발자" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
-# comments:
-#   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-#   disqus:
-#     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+comments:
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : cwadven # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 #   discourse:
 #     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
 #   facebook:
