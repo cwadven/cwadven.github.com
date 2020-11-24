@@ -146,6 +146,7 @@ include:
   - .htaccess
   - _pages
   - /python
+  - /data_structures
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
