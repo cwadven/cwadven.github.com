@@ -3,7 +3,7 @@ title: "[알고리즘] 공주 구하기 (Queue)"
 tag:
 - queue
 - 큐
-- 알고리름
+- 알고리즘
 categories:
 - algorithm
 - python
