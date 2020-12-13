@@ -6,7 +6,6 @@ tag:
 - 스택
 categories:
 - algorithm
-- python
 ---
 
 [stack]

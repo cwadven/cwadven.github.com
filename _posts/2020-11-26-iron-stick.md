@@ -6,7 +6,6 @@ tag:
 - 스택
 categories:
 - algorithm
-- python
 ---
 
 # (문제) 쇠막대기

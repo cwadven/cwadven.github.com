@@ -6,7 +6,6 @@ tag:
 - 알고리즘
 categories:
 - algorithm
-- python
 ---
 
 # (문제) 재귀함수 이용한 이진수 출력

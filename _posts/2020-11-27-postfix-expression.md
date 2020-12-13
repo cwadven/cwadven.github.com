@@ -6,7 +6,6 @@ tag:
 - stack
 categories:
 - algorithm
-- python
 ---
 
 # (문제) 후위표기식 만들기

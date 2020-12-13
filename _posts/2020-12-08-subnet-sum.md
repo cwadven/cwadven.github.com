@@ -6,7 +6,6 @@ tag:
 - 알고리즘
 categories:
 - algorithm
-- python
 ---
 
 # (문제) 합이 같은 부분집합 (DFS)
