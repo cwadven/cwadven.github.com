@@ -44,6 +44,15 @@ categories:
 
 # 해결방법
 
+**최대로 중복 이용해서 값을 구할 경우 --> 정 . 방 . 향 (최고 방법)**
+
+**최대로 중복 없이 이용해서 값을 구할 경우 --> 반 . 대 . 방 . 향 (최고 방법)**
+
+**최대로 중복 없이 이용해서 값을 구할 경우 --> 정 . 방 . 향 . 2 . 차 . 원 . 배 . 열**
+
+## 방법 1 ) 2차원 배열을 이용한 다이나믹 테이블
+
+
 ![]({{ 'assets/images/algorithm/best_score/best_score1.png' | relative_url }})<br><br>
 
 ![]({{ 'assets/images/algorithm/best_score/best_score2.png' | relative_url }})<br><br>
@@ -84,11 +93,54 @@ categories:
 
 ![]({{ 'assets/images/algorithm/best_score/best_score20.png' | relative_url }})<br><br>
 
+## 방법 2 ) 1차원 배열을 이용한 다이나믹 테이블
+
+![]({{ 'assets/images/algorithm/best_score/best_score21.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score22.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score23.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score24.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score25.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score26.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score27.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score28.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score29.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score30.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score31.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score32.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score33.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score34.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score35.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score36.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score37.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score38.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score39.png' | relative_url }})<br><br>
+
+![]({{ 'assets/images/algorithm/best_score/best_score40.png' | relative_url }})<br><br>
+
+
 ---
 # 코드
-```python
-# 냅색 알고리즘  ->  중복 가능 1차원 테이블 / 중복 불가능 2차원 테이블
+## 2차원 배열 방식
 
+```python
 n, m = map(int, input().split())
 
 # 문제[?][0] : 점수
@@ -109,4 +161,27 @@ for idx, question in enumerate(questions):
         dt[idx+1][j] = max(dt[idx][j], dt[idx][j-question[1]] + question[0])
 
 print(dt[-1][-1])
+```
+
+## 1차원 배열 방식
+
+```python
+# 2 차원을 이용해서 하면 시간 복잡도 문제가 생길 수 있다고 한다.
+# 1 차원으로 하는 경우 (반대로 값을 채우기 시작한다!)
+n, m = map(int, input().split())
+
+# 문제[?][0] : 점수
+# 문제[?][1] : 걸리는 시간
+questions = [list(map(int, input().split())) for _ in range(n)]
+
+# X분 안에 걸리는 시간의 최대 점수가 각 X 인덱스 안에 들어간다.
+dt = [0] * (m + 1)
+
+for question in questions:
+    # 뒤쪽에서 시작하여 온다
+    for j in range(m, question[1]-1, -1):
+        if dt[j] < dt[j-question[1]] + question[0]:
+            dt[j] = dt[j-question[1]] + question[0]
+
+print(dt[-1])
 ```
