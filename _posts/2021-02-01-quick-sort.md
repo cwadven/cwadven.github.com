@@ -106,7 +106,7 @@ def Qsort(LT, RT):
 
         # DFS 사용하여 옆쪽까지 적용한다.
         Qsort(LT, POS-1) # <---- 여기 실행
-        Qsort(POS, RT)
+        Qsort(POS+1, RT)
 ```
 
 ![]({{ 'assets/images/algorithm/quick/quick4.gif' | relative_url }})
@@ -172,7 +172,7 @@ def Qsort(LT, RT):
 
         # DFS 사용하여 옆쪽까지 적용한다.
         Qsort(LT, POS-1) # <---- 여기 실행
-        Qsort(POS, RT)
+        Qsort(POS+1, RT)
 ```
 
 ![]({{ 'assets/images/algorithm/quick/quick8.gif' | relative_url }})
@@ -238,7 +238,7 @@ def Qsort(LT, RT):
 
         # DFS 사용하여 옆쪽까지 적용한다.
         Qsort(LT, POS-1) # <---- 여기 끝
-        Qsort(POS, RT) # <---- 여기 실행
+        Qsort(POS+1, RT) # <---- 여기 실행
 ```
 
 ![]({{ 'assets/images/algorithm/quick/quick12.gif' | relative_url }})
@@ -323,7 +323,7 @@ def Qsort(LT, RT):
 
         # DFS 사용하여 옆쪽까지 적용한다.
         Qsort(LT, POS-1)
-        Qsort(POS, RT)
+        Qsort(POS+1, RT)
 
 
 if __name__ == "__main__":
