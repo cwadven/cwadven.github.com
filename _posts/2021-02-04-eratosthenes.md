@@ -76,11 +76,11 @@ for i in range(2, n+1):
     if n_arr[i] == 0:
         count = count + 1
 
-    # 배수로 돌음
-    # 해당 소수를 찾으면 그것을 이용하여 반복문을 그 소수의 배수로 돈다
-    for j in range(i, n+1, i):
-        # 첫번째는 빼고 다 1로
-        n_arr[j] = 1
+        # 배수로 돌음
+        # 해당 소수를 찾으면 그것을 이용하여 반복문을 그 소수의 배수로 돈다
+        for j in range(i, n+1, i):
+            # 첫번째는 빼고 다 1로
+            n_arr[j] = 1
 
 print(count)
 ```
