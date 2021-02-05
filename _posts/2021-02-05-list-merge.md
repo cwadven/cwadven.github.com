@@ -85,7 +85,7 @@ print(*TEMP)
 
 
 # 코드 방법 2 (파이썬 nic 하게)
-```python.
+```python
 n = int(input())
 arr1 = list(map(int, input().split()))
 
