@@ -148,6 +148,7 @@ include:
   - /python
   - /data_structures
   - /algorithm
+  - /regular_expression
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
