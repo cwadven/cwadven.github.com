@@ -4,7 +4,6 @@ tag:
 - 정규표현식
 - ''
 categories:
-- algorithm
 - regular_expression
 - python
 ---

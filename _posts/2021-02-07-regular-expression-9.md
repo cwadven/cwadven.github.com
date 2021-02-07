@@ -1,5 +1,5 @@
 ---
-title: "[파이썬] 정규표현식 9 (findall, sub, sub 교체함수, sub 찾은 문자열 사용)"
+title: "[파이썬] 정규표현식 9 (findall, sub, sub 교체함수, sub 찾은 문자열 재사용)"
 tag:
 - 정규표현식
 categories:
@@ -87,7 +87,7 @@ print(test1, test2, sep='\n')
 
 > **찾은 문자열을 결과에 다시 사용하기**
  
- `re.sub('그룹패턴', '\\그룹숫자', '문자열', 바꿀횟수)`
+ `re.sub('(패턴)', '\\그룹숫자', '문자열', 바꿀횟수)`
  
  **형태 : `\\숫자`**
  
@@ -130,3 +130,41 @@ print(test)
 딕셔너리를 태그 처럼 바꾸는 느낌
 
 ![]({{ 'assets/images/algorithm/regular_expression/regular_expression2.png' | relative_url }})<br><br>
+
+---
+
+> **찾은 문자열을 결과에 다시 사용하기 (그룹의 이름으로)**
+
+`re.sub('(?P<그룹이름>패턴)', '\\g<그룹이름>', '문자열', 바꿀횟수)`
+
+`re.sub('(?P<그룹이름>패턴)', '\\g<그룹번호>', '문자열', 바꿀횟수)`
+
+숫자 또한 그냥 가능하다
+
+**그룹이름**
+
+```python
+import re
+
+test = re.sub('({\s*)\"(?P<key>\w+)\"\s*:\s*\"?(?P<value>\w+)\"?(\s*})', '<\\g<key>>\\g<value></\\g<key>>', '{ "name" : "james" }')
+
+print(test)
+```
+
+~~~
+<name>james</name>
+~~~
+
+**그룹숫자**
+
+```python
+import re
+
+test = re.sub('({\s*)\"(?P<key>\w+)\"\s*:\s*\"?(?P<value>\w+)\"?(\s*})', '<\\g<2>>\\g<3></\\g<2>>', '{ "name" : "james" }')
+
+print(test)
+```
+
+~~~
+<name>james</name>
+~~~
