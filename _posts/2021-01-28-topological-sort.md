@@ -3,6 +3,7 @@ title: "[알고리즘] 위상정렬(그래프 정렬)"
 tag:
 - 알고리즘
 - 위상정렬
+- 중요
 categories:
 - algorithm
 ---

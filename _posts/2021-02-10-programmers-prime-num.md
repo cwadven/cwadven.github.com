@@ -5,6 +5,7 @@ title: |-
 tag:
 - 알고리즘
 - 프로그래머스 LEVEL1
+- 중요
 categories:
 - algorithm
 ---
@@ -41,6 +42,7 @@ n은 2이상 1000000이하의 자연수입니다.
 **에라토스테네스의 체 활용**
 
 [링크 바로가기 : 에라토스테네스의 체 활용 문제](https://cwadven.github.io/algorithm/eratosthenes/)
+
 
 ---
 # 코드
