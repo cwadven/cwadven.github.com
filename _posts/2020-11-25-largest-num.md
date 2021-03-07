@@ -79,3 +79,27 @@ res=''.join(map(str, stack)) # 해당 리스트를 join을 이용하여 문자�
 
 print(res) # 출력한다
 ```
+
+# 코드 2 [2021-03-04 복습]
+```python
+number, n = input().split()
+
+n = int(n)
+
+stack = []
+
+for i in range(len(number)):
+    current = number[i]
+    
+    while stack and stack[-1] < current and n:
+        stack.pop()
+        n = n - 1
+    
+    stack.append(current)
+
+if n:
+    for i in range(n):
+        stack.pop()
+
+print(int("".join(stack)))
+```

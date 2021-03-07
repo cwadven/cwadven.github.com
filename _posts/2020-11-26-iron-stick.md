@@ -103,3 +103,29 @@ for i in range(len(a)): # 레이저와 쇠파이프 문자열을 반복문을 �
 
 print(result)
 ```
+
+
+# 코드 복습 2021-03-07
+
+```python
+# 스택 이용 안해도 될듯...
+s = input()
+
+stack = 0
+answer = 0
+
+for i in range(len(s)):
+    if i > 0 and s[i-1] == '(' and s[i] == ')':
+        # 자르기 (스택에 있는 막대기 개수 증가)
+        stack = stack - 1
+        answer = answer + stack
+    elif i > 0 and s[i-1] == ')' and s[i] == ')':
+        # 스택 삭제 (막대기 개수 1개만 증가)
+        stack = stack - 1
+        answer = answer + 1
+    elif s[i] == '(':
+        # 스택 증가
+        stack = stack + 1
+
+print(answer)
+```
