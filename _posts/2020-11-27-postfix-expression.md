@@ -139,3 +139,36 @@ while stack:
 
 print(res)
 ```
+
+# 코드 복습 (2021-03-08)
+
+```python
+s = input()
+stack = []
+answer = ""
+
+for i in range(len(s)):
+    
+    if s[i] == '(':
+        stack.append(s[i])
+    elif s[i] == ')':
+        while stack and stack[-1] != '(':
+            answer = answer + stack.pop()
+        stack.pop()
+    elif s[i] == '*' or s[i] == '/':
+        while stack and stack[-1] != '(' and (stack[-1] == '*' or stack[-1] == '/'):
+            answer = answer + stack.pop()
+        stack.append(s[i])
+    # 나보다 큰 녀석 pop 시키기
+    elif s[i] == '+' or s[i] == '-':
+        while stack and stack[-1] != '(':
+            answer = answer + stack.pop()
+        stack.append(s[i])
+    else:
+        answer = answer + s[i]
+
+while stack:
+    answer = answer + stack.pop()
+
+print(answer)
+```
