@@ -81,3 +81,30 @@ for x in a:
 
 print(stack[0])
 ```
+
+# 코드 복습 (2021-03-12)
+
+```python
+arr = input()
+
+stack = []
+
+for x in arr:
+    if x.isnumeric():
+        stack.append(x)
+    else:
+        second = int(stack.pop())
+        first = int(stack.pop())
+        
+        if x == '+':
+            stack.append(first + second)
+        elif x == '-':
+            stack.append(first - second)
+        elif x == '*':
+            stack.append(first * second)
+        elif x == '/':
+            stack.append(first / second)
+
+
+print(stack[0])
+```
